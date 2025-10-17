@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <article class="card" data-testid="test-profile-card">
+        <h2 data-testid="test-user-name">Jethro Awa</h2>
+        <p data-testid="test-user-bio">Captain Jet ✈️ — Frontend Developer & Computer Science Student | Building sleek
+            UIs and full-stack projects as a Webisite Developer</p>
+        <p data-testid="test-user-time"></p>
+
+        <figure>
+            <img src="https://via.placeholder.com/150" alt="user-avatar" data-testid="test-user-avatar"
+                class="profile-pic">
+            <figcaption></figcaption>
+        </figure>
+
+        <nav>
+            <p>Contact me</p>
+            <ul data-testid="test-user-social-links">
+                <li><a href="#" data-testid="test-user-social-x">Twitter</a></li>
+                <li><a href="#" data-testid="test-user-social-linkedln>">LinkedIn</a></li>
+                <li><a href="#" data-testid="test-user-social-github">GitHub</a></li>
+            </ul>
+        </nav>
+
+        <section class="hobbies">
+            <p>My Hobbies</p>
+            <ul data-testid="test-user-hobbies">
+                <li>Chess</li>
+                <li>Football</li>
+                <li>History</li>
+            </ul>
+        </section>
+
+        <section class="dislikes">
+            <p>Things I Dislike</p>
+            <ul data-testid="test-user-dislikes">
+                <li>Hard Boiled Eggs</li>
+                <li>Procastinating</li>
+                <li>Igorance</li>
+            </ul>
+        </section>
+
+        <div class="actions">
+            <button data-testid="test-follow-button">Follow</button>
+            <button data-testid="test-message-button">Message</button>
+        </div>
+    </article>
+    <script src="script.js"></script>
+</body>
+
+</html>

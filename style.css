@@ -1,0 +1,254 @@
+/* ========== General Page Setup ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #f4f7fc, #e0ecff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.card {
+    background: #fff;
+    max-width: 380px;
+    width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+figure {
+    margin: 0;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007bff;
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: #222;
+    font-weight: 600;
+}
+
+[data-testid="test-user-bio"] {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0.5rem 0 0.8rem;
+}
+
+[data-testid="test-user-time"] {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+nav {
+    width: 100%;
+}
+
+nav p {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007bff;
+    background: #eef5ff;
+    padding: 0.5rem 0.9rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+/* ========== Hobbies & Dislikes ========== */
+section {
+    width: 100%;
+}
+
+section p {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #333;
+}
+
+ul[data-testid="test-user-hobbies"],
+ul[data-testid="test-user-dislikes"] {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.hobbies li,
+.dislikes li {
+    background: #f2f5f9;
+    color: #333;
+    padding: 0.45rem 0.9rem;
+    border-radius: 1rem;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.hobbies li:hover {
+    background: #e0f7e9;
+}
+
+.dislikes li:hover {
+    background: #ffe5e5;
+}
+
+/* ========== Action Buttons ========== */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.actions button {
+    border: none;
+    background: #007bff;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.actions button:hover {
+    background: #005ecb;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 1.5rem 1rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul,
+    .hobbies ul,
+    .dislikes ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        max-width: 850px;
+        max-height: 400px;
+        padding: 1.5rem 1rem;
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: 2fr 1fr;
+    }
+
+    h2 {
+        font-size: 2rem;
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    [data-testid="test-user-bio"] {
+        grid-row: 5 / 7;
+        grid-column: 1;
+    }
+
+    [data-testid="test-user-time"] {
+        grid-row: 6;
+        grid-column: 2;
+        align-self: end;
+    }
+
+    figure {
+        grid-row: 1 / 5;
+        grid-column: 1;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul,
+    .hobbies ul,
+    .dislikes ul,
+    .actions {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    nav{
+        grid-row: 2;
+        grid-column: 2;
+        justify-self: center;
+    }
+
+    .hobbies ul{
+        grid-row: 3;
+        grid-column: 2;
+        justify-self: center;
+    }
+
+    .dislikes ul {
+        grid-row: 4;
+        grid-column: 2;
+        justify-self: center;
+    }
+
+}
